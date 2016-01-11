@@ -1,2 +1,0 @@
-# msats.org
-MSATS website
