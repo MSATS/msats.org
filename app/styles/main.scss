@@ -1,4 +1,5 @@
 $icon-font-path: '../fonts/';
+$green: #0b9626;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
@@ -14,24 +15,20 @@ $icon-font-path: '../fonts/';
 /* Space out content a bit */
 body {}
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.footer {
-  //padding-left: 15px;
-  //padding-right: 15px;
-}
-
 /* Navbar */
 .navbar {
   min-height: auto;
   .navbar-brand { font-weight: bold; }
 }
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: $green;
+  text-decoration: underline;
+}
 
 /* Jumbotron */
 .jumbotron {
-  padding: 0;
-  img {
-    width:100%;
+  .container {
+    border-top:none;
   }
 }
 
@@ -44,26 +41,54 @@ body {}
     line-height: 40px;
     padding-bottom: 19px;
   }
+
+  .intro {
+    background: #777;
+  }
+
 }
 
 /* Custom page footer */
-.footer {
+footer {
+  background: rgb(0,0,0);
   color: #777;
+
+  .container {
+    border-top: none;
+  }
 }
 
 /* Links */
 a {
-  color: #0b9626;
+  color: $green;
 
   &:hover {
     color: #777777;
   }
 }
 
+/* section.content */
+section.content {
+    .container {
+      border-top: 1px solid #e5e5e5;
+      &:first-of-type {
+        border-top: none;
+      }
+    }
+
+    .top-link {
+      text-align: right;
+      font-size: small;
+      &:after {
+        content: ' \2191';
+      }
+    }
+}
+
 /* Container */
 .container{
   .logo {margin-bottom: 30px;}
-  border-top: 1px solid #e5e5e5;
+
   padding-top: 8px;
   margin-top: 12px;
 
@@ -74,27 +99,11 @@ a {
   }
 }
 
-.container {}
-
-.shadow-top {
-    height: 12px;
-    background: url(/images/shadow-top.png) top center no-repeat;
-    margin-top:24px;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
 
 /* Responsive: Smaller Screens */
 @media screen and (max-width: 768px) {
-  .jumbotron {display: none;}
+  .navbar {margin-bottom: 0;}
+  .jumbotron {margin-bottom: 0;}
 }
 
 /* Responsive: Portrait tablets and up */
@@ -105,10 +114,14 @@ a {
 
   /* Remove the padding we set earlier */
   .header,
-  .marketing,
   .footer {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .jumbotron {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   /* Space out the masthead */
