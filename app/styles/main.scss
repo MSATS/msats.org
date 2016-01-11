@@ -1,0 +1,126 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  //padding-left: 15px;
+  //padding-right: 15px;
+}
+
+/* Navbar */
+.navbar {
+  min-height: auto;
+  .navbar-brand { font-weight: bold; }
+}
+
+/* Jumbotron */
+.jumbotron {
+  padding: 0;
+  img {
+    width:100%;
+  }
+}
+
+/* Custom page header */
+.header {
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  color: #777;
+}
+
+/* Links */
+a {
+  color: #0b9626;
+
+  &:hover {
+    color: #777777;
+  }
+}
+
+/* Container */
+.container{
+  .logo {margin-bottom: 30px;}
+  border-top: 1px solid #e5e5e5;
+  padding-top: 8px;
+  margin-top: 12px;
+
+  &.intro {
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+.container {}
+
+.shadow-top {
+    height: 12px;
+    background: url(/images/shadow-top.png) top center no-repeat;
+    margin-top:24px;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Responsive: Smaller Screens */
+@media screen and (max-width: 768px) {
+  .jumbotron {display: none;}
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  header {
+    //margin-bottom: 30px;
+    & > .navbar {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
